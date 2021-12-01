@@ -23,18 +23,18 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	Player kat = new Player("/imgs/kat.PNG", 0, 250);
 	
 	//back side (common for all cards) Card baseCard = new Card();
-	Card backSide = new Card("/imgs/back of card.png", 100, 100);
-	Card backTwo = new Card("/imgs/back of card.png", 100, 100);
-	Card backThree = new Card("/imgs/back of card.png", 190, 100);
-	Card backFour = new Card("/imgs/back of card.png", 280, 100);
-	Card backFive = new Card("/imgs/back of card.png", 370, 100);
-	Card backSix = new Card("/imgs/back of card.png", 370, 100);
+	Card backSide = new Card("/imgs/back of card.png", 245, 280);
+	Card backTwo = new Card("/imgs/back of card.png", 345, 280);
+	Card backThree = new Card("/imgs/back of card.png", 445, 280);
+	Card backFour = new Card("/imgs/back of card.png", 545, 280);
+	Card backFive = new Card("/imgs/back of card.png", 645, 280);
+	Card backSix = new Card("/imgs/back of card.png", 745, 280);
 
 	Card cardOne = new Card();
-	Card cardTwo = new Card("/imgs/rabiddog.png", 100, 100);
-	Card cardThree = new Card("/imgs/rabiddog.png", 190, 100);
-	Card cardFour = new Card("/imgs/spryserpentcard4.png", 280, 100);
-	Card cardFive = new Card("/imgs/ruderaccooncard5.png", 370, 100);
+	Card cardTwo = new Card("/imgs/rabiddog.png", 345, 280);
+	Card cardThree = new Card("/imgs/rabiddog.png", 445, 280);
+	Card cardFour = new Card("/imgs/spryserpentcard4.png", 545, 280);
+	Card cardFive = new Card("/imgs/ruderaccooncard5.png", 645, 280);
 
 	
 	Font f1 = new Font(Font.SERIF, Font.PLAIN, 50);
@@ -45,17 +45,18 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		bg.paint(g);
 		henry.paint(g);
 		kat.paint(g);
-		backSide.paint(g); 
-		backTwo.paint(g); 
-		backThree.paint(g); 
-		backFour.paint(g);
-		backFive.paint(g);;
+//		backSide.paint(g); 
+//		backTwo.paint(g); 
+//		backThree.paint(g); 
+//		backFour.paint(g);
+//		backFive.paint(g);;
+//		backSix.paint(g);
 		//playerOne.paint(g);
-		//cardOne.paint(g);
-		//cardTwo.paint(g);
-		//cardThree.paint(g);
-		//cardFour.paint(g);
-		//cardFive.paint(g);
+		cardOne.paint(g);
+		cardTwo.paint(g);
+		cardThree.paint(g);
+		cardFour.paint(g);
+		cardFive.paint(g);
 	}
 	public static void main(String[] arg) {
 		Frame f = new Frame();
@@ -79,7 +80,9 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
-
+		if(arg0.getX()>=245 && arg0.getX()<=329 && arg0.getY()>=280 && arg0.getY()<=406) {
+			//cardOne.flip();
+		}
 	}
 
 	@Override
