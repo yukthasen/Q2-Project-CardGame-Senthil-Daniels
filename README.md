@@ -14,11 +14,11 @@
 
 - ⚡ Fun fact **I'm the most famous youtuber and Yuktha is the most girlboss**
 
-#Project Title
+# Project Title
 grahan the cracker man - his choice btw
-#Project descritption
+# Project descritption
 we wanted to make a card game that was visually appealing but simple enough to code. We used the rules of the card game war with java. We faced many challeneges but the biggest challenge was figuring out how to code our cards to flip over and associating which player gets the point if there's only one mouse.
-#how to play
+# how to play
 click and have fun
 
 <h3 align="left">Connect with me:</h3>
