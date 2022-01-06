@@ -3,6 +3,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,6 +11,9 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
+import java.util.Random;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.Timer;
@@ -23,40 +27,66 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	Player kat = new Player("/imgs/kat.PNG", 0, 250);
 	
 	//back side (common for all cards) Card baseCard = new Card();
-	Card backSide = new Card("/imgs/back of card.png", 245, 280);
-	Card backTwo = new Card("/imgs/back of card.png", 345, 280);
-	Card backThree = new Card("/imgs/back of card.png", 445, 280);
-	Card backFour = new Card("/imgs/back of card.png", 545, 280);
-	Card backFive = new Card("/imgs/back of card.png", 645, 280);
-	Card backSix = new Card("/imgs/back of card.png", 745, 280);
-
-	Card cardOne = new Card();
-	Card cardTwo = new Card("/imgs/rabiddog.png", 345, 280);
-	Card cardThree = new Card("/imgs/rabiddog.png", 445, 280);
-	Card cardFour = new Card("/imgs/spryserpentcard4.png", 545, 280);
-	Card cardFive = new Card("/imgs/ruderaccooncard5.png", 645, 280);
+	Card backSide = new Card("/imgs/back of card.png", 190, 250);
+	Card backTwo = new Card("/imgs/back of card.png", 330, 250);
+	Card backThree = new Card("/imgs/back of card.png", 470, 250);
+	Card backFour = new Card("/imgs/back of card.png", 610, 250);
+	Card backFive = new Card("/imgs/back of card.png", 750, 250);
+	
+	//front sides of cards
+	static Card cardOne = new Card();
+	static Card cardTwo = new Card("/imgs/rabiddog.png", 330, 250);
+	static Card cardThree = new Card("/imgs/crow coven card.png", 470, 250);
+	static Card cardFour = new Card("/imgs/spryserpentcard4.png", 610, 250);
+	static Card cardFive = new Card("/imgs/ruderaccooncard5.png", 750, 250);
+	
 
 	
 	Font f1 = new Font(Font.SERIF, Font.PLAIN, 50);
-	int score = 10;
+	int score1 = 0;//kat's score
+	int score2 = 0;//henry's score
+	
+	
+	
+   //array created to access list of card objects to flip random cards
+    	Card[] mixedArray = {cardOne, cardOne, cardTwo, cardThree, cardFour, cardFive};
+
 
 	public void paint(Graphics g) {
 		super.paintComponent(g);
 		bg.paint(g);
 		henry.paint(g);
 		kat.paint(g);
-//		backSide.paint(g); 
-//		backTwo.paint(g); 
-//		backThree.paint(g); 
-//		backFour.paint(g);
-//		backFive.paint(g);;
-//		backSix.paint(g);
-		//playerOne.paint(g);
+		
+		//painting scores
+		g.setFont(f1);
+		g.setColor(Color.white);
+		g.drawString("Kat's score: "+score1, 80,130);
+		g.drawString("Henry's score: "+score2, 600,130);
+		
+	
+		
+		//painting cards
 		cardOne.paint(g);
 		cardTwo.paint(g);
 		cardThree.paint(g);
 		cardFour.paint(g);
 		cardFive.paint(g);
+		
+		//will only paint message of who wins when score is 10
+		if(score1>=10 || score2>=10) {
+			if(score1>=score2) {
+				g.drawString("You win!!! Play again", 400, 500);
+			}else if(score1==score2) {
+				g.drawString("Oh no, Henry won :( Play again", 400, 500);
+			}else {
+				g.drawString("You and Henry tied...Play again", 400, 500);
+			}
+		}
+		
+		
+		
+		
 	}
 	public static void main(String[] arg) {
 		Frame f = new Frame();
@@ -78,11 +108,10 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		
 	}
 	
+Random rnd = new Random();
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
-		if(arg0.getX()>=245 && arg0.getX()<=329 && arg0.getY()>=280 && arg0.getY()<=406) {
-			//cardOne.flip();
-		}
+		
 	}
 
 	@Override
@@ -122,6 +151,27 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	@Override
 	public void keyReleased(KeyEvent arg0) {
 		// TODO Auto-generated method stub
+		//if up or down arrow is pressed card is flipped and score is updated 
+		if (arg0.getKeyCode()==38) {
+			backSide.flipped();
+			backTwo.flipped();
+			backThree.flipped();
+			backFour.flipped();
+			backFive.flipped();
+			int elm = rnd.nextInt((5-1)+1)+1;//picks random cards
+			mixedArray[elm].flipped();
+			score1 += elm;
+		}
+		if(arg0.getKeyCode()==40) {
+			backSide.flipped();
+			backTwo.flipped();
+			backThree.flipped();
+			backFour.flipped();
+			backFive.flipped();
+			int elm = rnd.nextInt((5-1)+1)+1;
+			mixedArray[elm].flipped();
+			score2 += elm;
+		}
 		
 	}
 
