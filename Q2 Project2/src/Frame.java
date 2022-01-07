@@ -75,7 +75,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		
 		//will only paint message of who wins when score is 10
 		if(score1>=5 || score2>=5) {
-			if(score1>=score2) {
+			if(score1>score2) {
 				g.drawString("You win!!! Play again", 400, 500);
 			}else if(score1==score2) {
 				g.drawString("You and Henry tied...Play again", 400, 500);
