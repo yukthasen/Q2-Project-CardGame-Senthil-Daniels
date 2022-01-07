@@ -16,7 +16,11 @@ grahan the cracker man - his choice btw
 # Project descritption
 we wanted to make a card game that was visually appealing but simple enough to code. We used the rules of the card game war with java. We faced many challeneges but the biggest challenge was figuring out how to code our cards to flip over and associating which player gets the point if there's only one mouse.
 # how to play
-click and have fun
+click the up arrow for your random card to flip
+click the down arrow for Henry's card
+the first to reach a score 5 and over wins! (Cards can repeat and will be added to the score)
+btw, if Henry wins, he'll get a girlfriend...don't let that happen
+have fun!!
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
