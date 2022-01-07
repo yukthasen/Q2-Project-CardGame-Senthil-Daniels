@@ -2,10 +2,6 @@
 <h1 align="center">What is up KatGang it's your girl Kat + Yuktha Kat and Yuktha</h1>
 <h3 align="center">Famous youtuber Kat and her famous MMC boss Yuktha</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=katelyn-dragon&label=Profile%20views&color=0e75b6&style=flat" alt="katelyn-dragon" /> </p>
-
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=katelyn-dragon" alt="katelyn-dragon" /></a> </p>
-
 - 🌱 I’m currently learning **Java**
 
 - 💬 Ask me about **lottery numbers**
