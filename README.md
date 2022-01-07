@@ -1,5 +1,5 @@
 # Q2-Project-CardGame-Senthil-Daniels
-<h1 align="center">What is up KatGang it's your girl Kat + Yuktha Kat and Yuktha</h1>
+<h1 align="center">What is up KatGang it's your girl Kat + Yuktha </h1>
 <h3 align="center">Famous youtuber Kat and her famous MMC boss Yuktha</h3>
 
 - 🌱 I’m currently learning **Java**
